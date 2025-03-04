@@ -30,5 +30,8 @@ public class Main {
         classificacao = (int) media/2;
         System.out.println(classificacao + "estrelas");
 
+        // instância da classe Exercicios
+        Exercicios exercicio = new Exercicios();
+        exercicio.calcuarTemperatura();
     }
 }
