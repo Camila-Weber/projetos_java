@@ -38,5 +38,7 @@ public class Main {
         //exercicio.conversaoDeMoeda();
         // Desconto de 10%
         //exercicio.desconto();
+        // Número Aleatório
+        exercicio.numeroAleatorio();
     }
 }

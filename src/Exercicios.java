@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Exercicios {
@@ -35,6 +36,31 @@ public class Exercicios {
         System.out.println("O valor final é de R$" + (valor - desconto) + " com um desconto (10%) de R$" +
                 desconto);
     }
+
+    public void numeroAleatorio(){
+        int numAleatorio = new Random().nextInt(100);
+        //System.out.println(numAleatorio);
+        int cont = 1;
+
+        while (true){
+            System.out.println("Digite um número:");
+            double numero = scanner.nextDouble();
+            scanner.nextLine();
+
+            if (numero > numAleatorio){
+                System.out.println("O número aleatório é menor!");
+                cont++;
+            } else if (numero < numAleatorio){
+                System.out.println("O número aleatório é maior!");
+                cont++;
+            } else {
+                System.out.println("Parabéns!!! Você acertou o número aleatório com " + cont + " tentativas.");
+                break;
+            }
+
+        }
+    }
+
 
 
 
