@@ -37,6 +37,6 @@ public class Main {
         // Real para Dólar
         //exercicio.conversaoDeMoeda();
         // Desconto de 10%
-        exercicio.desconto();
+        //exercicio.desconto();
     }
 }
