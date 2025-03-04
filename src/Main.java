@@ -15,13 +15,20 @@ public class Main {
 
         String sinopse = "Filme de aventura com galã dos anos 80.";
         System.out.println(sinopse);
+
         // formatação de texto com concatenação de variáveis com o printf
+        // a estrutura System.out.println(String.format("")); também pode ser usada para formatar
         System.out.printf("""
                 Filme: Top Gun
                 Sinopse: %s
                 Ano de lançamento: %d
                 Média de notas: %.2f
                 """, sinopse, anoDeLancamento, media);
+
+        // casting
+        int classificacao;
+        classificacao = (int) media/2;
+        System.out.println(classificacao + "estrelas");
 
     }
 }
