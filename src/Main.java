@@ -32,13 +32,23 @@ public class Main {
 
         // instância da classe Exercicios
         Exercicios exercicio = new Exercicios();
+
         // °C para °F
         //exercicio.calcuarTemperatura();
+
         // Real para Dólar
         //exercicio.conversaoDeMoeda();
+
         // Desconto de 10%
         //exercicio.desconto();
+
         // Número Aleatório
-        exercicio.numeroAleatorio();
+        //exercicio.numeroAleatorio();
+
+        // Classificação e operações com um número
+        //exercicio.classificacaoNumero();
+
+        // Calcular Área
+        exercicio.calcularArea();
     }
 }
