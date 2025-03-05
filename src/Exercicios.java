@@ -97,7 +97,7 @@ public class Exercicios {
         }
     }
 
-    public void calcularArea(){
+    public void calcularArea() {
         System.out.println("Digite um valor:");
         int valor = scanner.nextInt();
         scanner.nextLine();
@@ -108,11 +108,11 @@ public class Exercicios {
                 2 - Calcular área de um círculo
                 """);
 
-        while (true){
+        while (true) {
             int opcao = scanner.nextInt();
             scanner.nextLine();
 
-            switch (opcao){
+            switch (opcao) {
                 case 1:
                     System.out.println("A área do quadrado é " + valor * valor);
                     return;

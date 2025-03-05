@@ -49,6 +49,6 @@ public class Main {
         //exercicio.classificacaoNumero();
 
         // Calcular Área
-        exercicio.calcularArea();
+        //exercicio.calcularArea();
     }
 }
