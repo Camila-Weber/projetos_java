@@ -1,3 +1,5 @@
+package basico;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -30,7 +32,7 @@ public class Main {
         classificacao = (int) media/2;
         System.out.println(classificacao + "estrelas");
 
-        // instância da classe Exercicios
+        // instância da classe básico.Exercicios
         Exercicios exercicio = new Exercicios();
 
         // °C para °F
