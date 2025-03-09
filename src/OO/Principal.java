@@ -6,6 +6,8 @@ import OO.screenmatch.modelo.Filme;
 import OO.screenmatch.modelo.Serie;
 import OO.screenmatch.calculos.CalculadoraDeTempo;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
         Filme filme1 = new Filme();
@@ -51,5 +53,19 @@ public class Principal {
 
         filtro.filtra(episodio);
 
+        Filme filme3 = new Filme();
+        filme3.setNome("Moana");
+        filme3.setDuracaoEmMinutos(65);
+        filme3.setAnoDeLancamento(2015);
+        filme3.avalia(8.9);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filme3);
+        listaDeFilmes.add(filme1);
+        listaDeFilmes.add(filme1);
+
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
+        System.out.println(listaDeFilmes);
     }
 }
