@@ -1,8 +1,10 @@
 package OO;
 
+import OO.screenmatch.calculos.FiltroRecomendacao;
+import OO.screenmatch.modelo.Episodio;
 import OO.screenmatch.modelo.Filme;
 import OO.screenmatch.modelo.Serie;
-import OO.screenmatch.modelo.calculos.CalculadoraDeTempo;
+import OO.screenmatch.calculos.CalculadoraDeTempo;
 
 public class Principal {
     public static void main(String[] args) {
@@ -38,6 +40,16 @@ public class Principal {
         calculadora.inclui(filme2);
         calculadora.inclui(serie1);
         System.out.println("Tempo total: " + calculadora.getTempoTotal());
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(filme1);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setSerie(serie1);
+        episodio.setTotalVisualizacoes(90);
+
+        filtro.filtra(episodio);
 
     }
 }

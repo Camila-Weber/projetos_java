@@ -1,4 +1,4 @@
-package OO.screenmatch.modelo.calculos;
+package OO.screenmatch.calculos;
 
 import OO.screenmatch.modelo.Titulo;
 
