@@ -2,6 +2,7 @@ package OO;
 
 import OO.screenmatch.modelo.Filme;
 import OO.screenmatch.modelo.Serie;
+import OO.screenmatch.modelo.calculos.CalculadoraDeTempo;
 
 public class Principal {
     public static void main(String[] args) {
@@ -25,5 +26,18 @@ public class Principal {
         serie1.setEpisodiosPorTemporada(10);
         serie1.setMinutosPorEpisodio(50);
         System.out.println("Duração para maratonar " + serie1.getNome() + ": " + serie1.getDuracaoEmMinutos());
+
+        Filme filme2 = new Filme();
+
+        filme2.setNome("Avatar");
+        filme2.setAnoDeLancamento(2022);
+        filme2.setDuracaoEmMinutos(120);
+
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(filme1);
+        calculadora.inclui(filme2);
+        calculadora.inclui(serie1);
+        System.out.println("Tempo total: " + calculadora.getTempoTotal());
+
     }
 }
