@@ -1,6 +1,6 @@
 package OO.screenmatch.modelo;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo> {
     private String nome;
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
@@ -63,4 +63,8 @@ public class Titulo {
         return somaAvaliacoes / totalAvaliacoes;
     }
 
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome());
+    }
 }
