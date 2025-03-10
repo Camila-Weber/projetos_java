@@ -1,4 +1,4 @@
-package OO;
+package OO.screenmatch.principal;
 
 import OO.screenmatch.calculos.FiltroRecomendacao;
 import OO.screenmatch.modelo.Episodio;
@@ -12,10 +12,6 @@ public class Principal {
     public static void main(String[] args) {
         Filme filme1 = new Filme("Barbie", 2001, 95);
 
-//        filme1.setNome("Barbie");
-//        filme1.setAnoDeLancamento(2001);
-//        filme1.setDuracaoEmMinutos(95);
-
         filme1.avalia(8.9);
         filme1.avalia(6.7);
         filme1.avalia(9);
@@ -24,18 +20,13 @@ public class Principal {
         System.out.println("Média: " + filme1.retornaMedia());
         System.out.println("Total de avaliações: " + filme1.getTotalAvaliacoes());
 
-        Serie serie1 = new Serie();
-        serie1.setNome("Lost");
+        Serie serie1 = new Serie("Lost", 2001, 0);
         serie1.setTemporadas(10);
         serie1.setEpisodiosPorTemporada(10);
         serie1.setMinutosPorEpisodio(50);
         System.out.println("Duração para maratonar " + serie1.getNome() + ": " + serie1.getDuracaoEmMinutos());
 
         Filme filme2 = new Filme("Avatar", 2022, 120);
-
-//        filme2.setNome("Avatar");
-//        filme2.setAnoDeLancamento(2022);
-//        filme2.setDuracaoEmMinutos(120);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         calculadora.inclui(filme1);
@@ -54,15 +45,12 @@ public class Principal {
         filtro.filtra(episodio);
 
         Filme filme3 = new Filme("Moana", 2015, 65);
-//        filme3.setNome("Moana");
-//        filme3.setDuracaoEmMinutos(65);
-//        filme3.setAnoDeLancamento(2015);
         filme3.avalia(8.9);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
         listaDeFilmes.add(filme3);
         listaDeFilmes.add(filme1);
-        listaDeFilmes.add(filme1);
+        listaDeFilmes.add(filme2);
 
         System.out.println("Tamanho da lista: " + listaDeFilmes.size());
         System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());

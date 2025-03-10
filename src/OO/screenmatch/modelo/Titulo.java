@@ -8,6 +8,13 @@ public class Titulo {
     private int totalAvaliacoes;
     private int duracaoEmMinutos;
 
+    // Construtor
+    public Titulo(String nome, int anoDeLancamento, int duracaoEmMinutos) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+        this.duracaoEmMinutos = duracaoEmMinutos;
+    }
+
     // Getters e Setters
     public void setNome(String nome) {
         this.nome = nome;
