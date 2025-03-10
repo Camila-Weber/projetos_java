@@ -6,6 +6,8 @@ import OO.screenmatch.modelo.Titulo;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -30,7 +32,7 @@ public class PrincipalComListas {
             }
         }
 
-        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        List<String> buscaPorArtista = new ArrayList<>();
         buscaPorArtista.add("Adam Sandler");
         buscaPorArtista.add("The Rock");
         buscaPorArtista.add("Fernanda Montenegro");
@@ -42,6 +44,9 @@ public class PrincipalComListas {
 
         Collections.sort(lista);
         System.out.println("Depois da ordenação da lista de filmes: " + lista);
+
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        System.out.println("Depois da ordenação por ano de lançamento da lista de filmes: \n" + lista);
 
 
     }
