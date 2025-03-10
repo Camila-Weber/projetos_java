@@ -5,6 +5,12 @@ import OO.screenmatch.calculos.Classificavel;
 public class Filme extends Titulo implements Classificavel {
     private String diretor;
 
+    public Filme(String nome, int anoDeLancamento, int duracaoMinutos) {
+        this.setNome(nome);
+        this.setAnoDeLancamento(anoDeLancamento);
+        this.setDuracaoEmMinutos(duracaoMinutos);
+    }
+
     public String getDiretor() {
         return diretor;
     }

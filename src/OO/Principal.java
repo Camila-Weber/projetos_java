@@ -10,11 +10,11 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme filme1 = new Filme();
+        Filme filme1 = new Filme("Barbie", 2001, 95);
 
-        filme1.setNome("Barbie");
-        filme1.setAnoDeLancamento(2001);
-        filme1.setDuracaoEmMinutos(95);
+//        filme1.setNome("Barbie");
+//        filme1.setAnoDeLancamento(2001);
+//        filme1.setDuracaoEmMinutos(95);
 
         filme1.avalia(8.9);
         filme1.avalia(6.7);
@@ -31,11 +31,11 @@ public class Principal {
         serie1.setMinutosPorEpisodio(50);
         System.out.println("Duração para maratonar " + serie1.getNome() + ": " + serie1.getDuracaoEmMinutos());
 
-        Filme filme2 = new Filme();
+        Filme filme2 = new Filme("Avatar", 2022, 120);
 
-        filme2.setNome("Avatar");
-        filme2.setAnoDeLancamento(2022);
-        filme2.setDuracaoEmMinutos(120);
+//        filme2.setNome("Avatar");
+//        filme2.setAnoDeLancamento(2022);
+//        filme2.setDuracaoEmMinutos(120);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         calculadora.inclui(filme1);
@@ -53,10 +53,10 @@ public class Principal {
 
         filtro.filtra(episodio);
 
-        Filme filme3 = new Filme();
-        filme3.setNome("Moana");
-        filme3.setDuracaoEmMinutos(65);
-        filme3.setAnoDeLancamento(2015);
+        Filme filme3 = new Filme("Moana", 2015, 65);
+//        filme3.setNome("Moana");
+//        filme3.setDuracaoEmMinutos(65);
+//        filme3.setAnoDeLancamento(2015);
         filme3.avalia(8.9);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
