@@ -1,5 +1,11 @@
 package OO.screenmatch.principal;
 
+import OO.screenmatch.modelo.Titulo;
+import OO.screenmatch.modelo.TituloOmdb;
+import com.google.gson.FieldNamingPolicy;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -20,6 +26,15 @@ public class PrincipalComBusca {
                 .build();
         HttpResponse<String> response = client
                 .send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println(response.body());
+        String dadosFilme = response.body();
+        System.out.println(dadosFilme);
+
+        Gson gson = new GsonBuilder()
+                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                .create();
+        //Titulo filme1 = gson.fromJson(dadosFilme, Titulo.class);
+        TituloOmdb filme1 = gson.fromJson(dadosFilme, TituloOmdb.class);
+        System.out.println(filme1);
+
     }
 }
