@@ -1,7 +1,5 @@
 package OO.screenmatch.modelo;
 
-import com.google.gson.annotations.SerializedName;
-
 public class Titulo implements Comparable<Titulo> {
     private String nome;
     private int anoDeLancamento;
@@ -15,6 +13,12 @@ public class Titulo implements Comparable<Titulo> {
         this.nome = nome;
         this.anoDeLancamento = anoDeLancamento;
         this.duracaoEmMinutos = duracaoEmMinutos;
+    }
+
+    public Titulo(TituloOmdb filme) {
+        this.nome = filme.Title();
+        this.anoDeLancamento = Integer.valueOf(filme.Year());
+        this.duracaoEmMinutos = Integer.valueOf(filme.Runtime().substring(0, 3));
     }
 
     // Getters e Setters
@@ -72,6 +76,6 @@ public class Titulo implements Comparable<Titulo> {
 
     @Override
     public String toString() {
-        return "Nome = " + nome + " (" + anoDeLancamento + ")";
+        return "Título: " + nome + " (" + anoDeLancamento + ")\nDuração: " + duracaoEmMinutos + " min";
     }
 }
