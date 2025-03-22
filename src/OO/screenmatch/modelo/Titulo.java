@@ -1,5 +1,7 @@
 package OO.screenmatch.modelo;
 
+import OO.screenmatch.excecao.ErroDeConversaoDeAnoException;
+
 public class Titulo implements Comparable<Titulo> {
     private String nome;
     private int anoDeLancamento;
@@ -17,6 +19,10 @@ public class Titulo implements Comparable<Titulo> {
 
     public Titulo(TituloOmdb filme) {
         this.nome = filme.Title();
+        if(filme.Year().length() > 4) {
+            throw new ErroDeConversaoDeAnoException("Não consegui converter o ano " +
+                    "porque tem mais de 04 caracteres.");
+        }
         this.anoDeLancamento = Integer.valueOf(filme.Year());
         this.duracaoEmMinutos = Integer.valueOf(filme.Runtime().substring(0, 3));
     }
@@ -76,6 +82,6 @@ public class Titulo implements Comparable<Titulo> {
 
     @Override
     public String toString() {
-        return "Título: " + nome + " (" + anoDeLancamento + ")\nDuração: " + duracaoEmMinutos + " min";
+        return "(Título: " + nome + " (" + anoDeLancamento + ") Duração: " + duracaoEmMinutos + " min)";
     }
 }

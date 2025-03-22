@@ -1,0 +1,27 @@
+[
+  {
+    "Cep": "01001-000",
+    "Logradouro": "Praça da Sé",
+    "Bairro": "Sé",
+    "Localidade": "São Paulo",
+    "Uf": "SP",
+    "Estado": "São Paulo",
+    "Regiao": "Sudeste",
+    "Ddd": "11"
+  },
+  {},
+  {
+    "Cep": "74425-310",
+    "Logradouro": "Rua Domingos Vigiano",
+    "Bairro": "Cidade Jardim",
+    "Localidade": "Goiânia",
+    "Uf": "GO",
+    "Estado": "Goiás",
+    "Regiao": "Centro-Oeste",
+    "Ddd": "62"
+  },
+  {},
+  {},
+  {},
+  {}
+]
